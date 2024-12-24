@@ -4,78 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Base 🧢</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        /* Styles for new features */
-        .quiz, .avatar-builder {
-            border: 2px solid #0288d1;
-            padding: 1rem;
-            margin: 1rem auto;
-            border-radius: 10px;
-            background-color: #b3e5fc;
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #003366;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .quiz button, .avatar-builder button {
-            margin-top: 1rem;
+        header {
+            background-color: #00509e;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav {
+            background-color: #0288d1;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
             padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #003366;
+            transform: scale(1.1);
+        }
+
+        main {
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 1000px;
+            background-color: #ffffff;
+            border: 1px solid #0288d1;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0288d1;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        button {
             background-color: #00509e;
             color: white;
             border: none;
             border-radius: 5px;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .quiz button:hover, .avatar-builder button:hover {
-            background-color: #0288d1;
+        button:hover {
+            background-color: #003366;
+            transform: scale(1.05);
         }
 
+        .avatar-preview {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Stats Section */
         .stats {
             background: linear-gradient(45deg, #00509e, #0288d1);
             color: white;
-            padding: 1rem;
-            margin: 1rem auto;
-            text-align: center;
+            padding: 2rem;
             border-radius: 10px;
-            max-width: 500px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        .help-bot {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #0288d1;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            color: white;
-            font-size: 24px;
+        .stats h3 {
+            font-size: 1.8rem;
         }
 
-        @keyframes confetti {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
-        }
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
 
-        .confetti {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: #FFD700;
-            animation: confetti 2s linear infinite;
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.8rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 id="typing-greeting">Welcome to the Blue Base 🧢</h1>
+        <h1>Welcome to the Blue Base 🧢</h1>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -85,96 +162,21 @@
         <a href="#">About</a>
     </nav>
     <main>
+        <h2>Your Home Base for All Things Blue Team</h2>
         <section class="stats">
             <h3>Blue Team Live Stats</h3>
             <p id="threats-defended">Threats defended today: 0</p>
         </section>
-        
-        <section class="quiz">
-            <h3>Blue Team Quiz</h3>
-            <p>What is the primary role of the Blue Team?</p>
-            <button onclick="showQuizResult(true)">Defend Systems</button>
-            <button onclick="showQuizResult(false)">Attack Systems</button>
-            <p id="quiz-result"></p>
+        <section>
+            <p>Welcome to the official hub of the Blue Team. Defend, strategize, and conquer challenges with your teammates. Explore resources, build your skills, and stay ahead of cyber threats!</p>
         </section>
-
-        <section class="avatar-builder">
-            <h3>Build Your Blue Team Avatar</h3>
-            <label for="hat">Hat Color:</label>
-            <input type="color" id="hat" value="#00509e">
-            <br>
-            <button onclick="buildAvatar()">Create Avatar</button>
-            <div id="avatar-preview"></div>
+        <section class="avatar-preview">
+            <h3>Personalize Your Blue Team Avatar</h3>
+            <button>Create Avatar</button>
         </section>
     </main>
-    <div class="help-bot" onclick="showHelp()">?</div>
-
     <footer>
-        <p>&copy; 2024 Blue Team. All rights reserved.</p>
+        <p>&copy; 2024 Blue Base. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Typing Effect for Greeting
-        const typingElement = document.getElementById("typing-greeting");
-        const greetingText = "Welcome to the Blue Base 🧢";
-        let charIndex = 0;
-
-        function typeGreeting() {
-            if (charIndex < greetingText.length) {
-                typingElement.textContent += greetingText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeGreeting, 100);
-            }
-        }
-        typeGreeting();
-
-        // Real-Time Stats
-        let threatsDefended = 0;
-        setInterval(() => {
-            threatsDefended += Math.floor(Math.random() * 5);
-            document.getElementById("threats-defended").textContent = `Threats defended today: ${threatsDefended}`;
-        }, 2000);
-
-        // Quiz Logic
-        function showQuizResult(isCorrect) {
-            const resultElement = document.getElementById("quiz-result");
-            if (isCorrect) {
-                resultElement.textContent = "Correct! The Blue Team defends systems from threats.";
-                resultElement.style.color = "green";
-            } else {
-                resultElement.textContent = "Incorrect! Try again.";
-                resultElement.style.color = "red";
-            }
-        }
-
-        // Avatar Builder
-        function buildAvatar() {
-            const hatColor = document.getElementById("hat").value;
-            const preview = document.getElementById("avatar-preview");
-            preview.innerHTML = `
-                <div style="width: 100px; height: 100px; background-color: ${hatColor}; border-radius: 50%; margin: 1rem auto;"></div>
-                <p>Here's your Blue Team avatar!</p>
-            `;
-        }
-
-        // Help Bot
-        function showHelp() {
-            alert("Need help? Explore resources or take the quiz to learn more!");
-        }
-
-        // Easter Egg: Confetti
-        const header = document.querySelector("header");
-        header.addEventListener("click", () => {
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement("div");
-                confetti.className = "confetti";
-                confetti.style.left = Math.random() * 100 + "vw";
-                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                confetti.style.animationDuration = Math.random() * 2 + 1 + "s";
-                document.body.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 2000);
-            }
-        });
-    </script>
 </body>
 </html>
