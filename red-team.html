@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team Quiz</title>
+    <script src="scripts/red-team.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Red Team Strategies</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Test Your Knowledge</h2>
+            <p>What is the primary goal of a Red Team?</p>
+            <form id="quiz-form">
+                <input type="radio" id="option1" name="goal" value="penetration">
+                <label for="option1">Penetration Testing</label><br>
+                <input type="radio" id="option2" name="goal" value="defense">
+                <label for="option2">Defending Systems</label><br>
+                <button type="submit">Submit Answer</button>
+            </form>
+            <p id="quiz-result"></p>
+        </section>
+    </main>
+</body>
+</html>
