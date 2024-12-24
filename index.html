@@ -12,53 +12,53 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8fbfd;
-            color: #333;
+            background-color: #0b132b; /* Deep navy background */
+            color: #ffffff; /* White text for contrast */
             overflow-x: hidden;
         }
 
         header {
             position: relative;
-            background: url('https://source.unsplash.com/1920x1080/?technology,cybersecurity') no-repeat center/cover;
-            height: 90vh;
+            background: linear-gradient(120deg, #1c2541, #0b132b);
             color: white;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            height: 90vh;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin: 0.5rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
             font-family: 'Raleway', sans-serif;
+            text-shadow: 0 0 10px #0288d1, 0 0 20px #00bcd4; /* Glowing effect */
         }
 
         header p {
             font-size: 1.5rem;
-            margin: 0.5rem 0 1.5rem;
+            margin: 1rem 0;
             max-width: 700px;
-            line-height: 1.6;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+            color: #b3e5fc; /* Subtle cyan for accents */
         }
 
         header button {
             background-color: #0288d1;
             color: white;
             border: none;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 30px;
             font-size: 1.2rem;
             cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.6);
             transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         header button:hover {
-            background-color: #00509e;
+            background-color: #00bcd4;
             transform: scale(1.1);
         }
 
@@ -66,25 +66,24 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: white;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            background: #1c2541; /* Darker blue */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             padding: 1rem;
         }
 
         nav a {
-            color: #0288d1;
+            color: #00bcd4; /* Bright cyan */
             text-decoration: none;
             font-weight: 700;
-            font-family: 'Raleway', sans-serif;
             margin: 0 1.5rem;
             transition: color 0.3s ease, border-bottom 0.3s ease;
         }
 
         nav a:hover {
-            color: #00509e;
-            border-bottom: 2px solid #00509e;
+            color: #0288d1;
+            border-bottom: 2px solid #0288d1;
         }
 
         section {
@@ -96,16 +95,14 @@
 
         section h2 {
             font-size: 2.5rem;
-            color: #0288d1;
-            font-family: 'Raleway', sans-serif;
-            margin-bottom: 1rem;
+            color: #00bcd4;
+            text-shadow: 0 0 8px #00bcd4; /* Glow for section headers */
         }
 
         section p {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #555;
-            margin-bottom: 2rem;
+            color: #b3e5fc;
         }
 
         .card {
@@ -116,43 +113,44 @@
         }
 
         .card-item {
-            background: white;
+            background: #1c2541; /* Dark blue card background */
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            text-align: left;
             max-width: 350px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5);
         }
 
         .card-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-bottom: 4px solid #00bcd4;
         }
 
         .card-item h3 {
             padding: 1rem;
             font-size: 1.5rem;
-            color: #0288d1;
+            color: #00bcd4;
         }
 
         .card-item p {
             padding: 0 1rem 1.5rem;
-            color: #555;
+            color: #b3e5fc;
         }
 
         footer {
-            background-color: #003366;
-            color: white;
+            background-color: #1c2541;
+            color: #b3e5fc;
             padding: 2rem 1rem;
             text-align: center;
             margin-top: 4rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
         }
 
         footer p {
@@ -162,7 +160,7 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             header p {
@@ -179,7 +177,7 @@
     <header>
         <h1>Welcome to the Blue Base 🧢</h1>
         <p>Your ultimate hub for cybersecurity resources, projects, and collaboration.</p>
-        <button>Get Started</button>
+        <button>Join the Mission</button>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -191,7 +189,7 @@
     <main>
         <section>
             <h2>Why Join the Blue Base?</h2>
-            <p>The Blue Base is a collaborative platform designed for cybersecurity professionals and enthusiasts. Together, we tackle challenges, build skills, and defend against threats.</p>
+            <p>Step into the world of cybersecurity with like-minded individuals. Build, defend, and conquer threats with cutting-edge resources.</p>
         </section>
         <section>
             <h2>Explore Our Features</h2>
@@ -199,17 +197,17 @@
                 <div class="card-item">
                     <img src="https://source.unsplash.com/350x200/?teamwork" alt="Teamwork">
                     <h3>Collaboration</h3>
-                    <p>Work with like-minded professionals to solve real-world cybersecurity problems.</p>
+                    <p>Join forces with others to tackle real-world cybersecurity challenges.</p>
                 </div>
                 <div class="card-item">
                     <img src="https://source.unsplash.com/350x200/?coding" alt="Projects">
-                    <h3>Projects</h3>
-                    <p>Access hands-on projects to enhance your cybersecurity skills.</p>
+                    <h3>Hands-On Projects</h3>
+                    <p>Sharpen your skills by working on interactive, engaging projects.</p>
                 </div>
                 <div class="card-item">
-                    <img src="https://source.unsplash.com/350x200/?learning" alt="Resources">
-                    <h3>Resources</h3>
-                    <p>Find the best tools, articles, and guides to stay ahead of the curve.</p>
+                    <img src="https://source.unsplash.com/350x200/?technology" alt="Resources">
+                    <h3>Top Resources</h3>
+                    <p>Access curated tools and guides to elevate your cybersecurity knowledge.</p>
                 </div>
             </div>
         </section>
