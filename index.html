@@ -12,107 +12,147 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
-            color: #003366;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: #f8fbfd;
+            color: #333;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: #00509e;
+            position: relative;
+            background: url('https://source.unsplash.com/1920x1080/?technology,cybersecurity') no-repeat center/cover;
+            height: 90vh;
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 2.8rem;
-            margin: 0;
+            font-size: 3.5rem;
+            margin: 0.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
             font-family: 'Raleway', sans-serif;
         }
 
-        nav {
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0 1.5rem;
+            max-width: 700px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        header button {
             background-color: #0288d1;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            padding: 1rem;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
             color: white;
-            font-weight: 700;
-            text-decoration: none;
-            font-family: 'Raleway', sans-serif;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        nav a:hover {
-            background-color: #003366;
+        header button:hover {
+            background-color: #00509e;
             transform: scale(1.1);
         }
 
-        main {
-            margin: 2rem auto;
-            padding: 2rem;
-            max-width: 1000px;
-            background-color: #ffffff;
-            border: 1px solid #0288d1;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
         }
 
-        h2 {
-            font-size: 2rem;
+        nav a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Raleway', sans-serif;
+            margin: 0 1.5rem;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00509e;
+            border-bottom: 2px solid #00509e;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
             color: #0288d1;
             font-family: 'Raleway', sans-serif;
             margin-bottom: 1rem;
         }
 
-        p {
+        section p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 1rem 0;
-        }
-
-        section {
+            line-height: 1.8;
+            color: #555;
             margin-bottom: 2rem;
         }
 
-        button {
-            background-color: #00509e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+        .card {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        button:hover {
-            background-color: #003366;
-            transform: scale(1.05);
+        .card-item {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: left;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .avatar-preview {
-            margin-top: 1rem;
-            text-align: center;
+        .card-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-item h3 {
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: #0288d1;
+        }
+
+        .card-item p {
+            padding: 0 1rem 1.5rem;
+            color: #555;
         }
 
         footer {
             background-color: #003366;
             color: white;
+            padding: 2rem 1rem;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            width: 100%;
+            margin-top: 4rem;
         }
 
         footer p {
@@ -120,32 +160,17 @@
             font-size: 1rem;
         }
 
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(45deg, #00509e, #0288d1);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .stats h3 {
-            font-size: 1.8rem;
-        }
-
-        /* Responsiveness */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
-            nav a {
-                font-size: 0.9rem;
-                padding: 0.5rem 0.8rem;
+            header p {
+                font-size: 1.2rem;
             }
 
-            main {
-                padding: 1.5rem;
+            .card-item {
+                max-width: 100%;
             }
         }
     </style>
@@ -153,6 +178,8 @@
 <body>
     <header>
         <h1>Welcome to the Blue Base 🧢</h1>
+        <p>Your ultimate hub for cybersecurity resources, projects, and collaboration.</p>
+        <button>Get Started</button>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -162,17 +189,29 @@
         <a href="#">About</a>
     </nav>
     <main>
-        <h2>Your Home Base for All Things Blue Team</h2>
-        <section class="stats">
-            <h3>Blue Team Live Stats</h3>
-            <p id="threats-defended">Threats defended today: 0</p>
+        <section>
+            <h2>Why Join the Blue Base?</h2>
+            <p>The Blue Base is a collaborative platform designed for cybersecurity professionals and enthusiasts. Together, we tackle challenges, build skills, and defend against threats.</p>
         </section>
         <section>
-            <p>Welcome to the official hub of the Blue Team. Defend, strategize, and conquer challenges with your teammates. Explore resources, build your skills, and stay ahead of cyber threats!</p>
-        </section>
-        <section class="avatar-preview">
-            <h3>Personalize Your Blue Team Avatar</h3>
-            <button>Create Avatar</button>
+            <h2>Explore Our Features</h2>
+            <div class="card">
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/350x200/?teamwork" alt="Teamwork">
+                    <h3>Collaboration</h3>
+                    <p>Work with like-minded professionals to solve real-world cybersecurity problems.</p>
+                </div>
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/350x200/?coding" alt="Projects">
+                    <h3>Projects</h3>
+                    <p>Access hands-on projects to enhance your cybersecurity skills.</p>
+                </div>
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/350x200/?learning" alt="Resources">
+                    <h3>Resources</h3>
+                    <p>Find the best tools, articles, and guides to stay ahead of the curve.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
