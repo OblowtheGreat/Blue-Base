@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Wireshark",
+        "link": "https://www.wireshark.org/",
+        "description": "Analyze network traffic to detect potential vulnerabilities."
+    },
+    {
+        "name": "Kali Linux",
+        "link": "https://www.kali.org/",
+        "description": "A comprehensive penetration testing platform."
+    },
+    {
+        "name": "Burp Suite",
+        "link": "https://portswigger.net/burp",
+        "description": "Analyze and intercept web traffic to identify vulnerabilities."
+    }
+]
