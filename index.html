@@ -1,207 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Base 🦢</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0b132b;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: relative;
-            background: linear-gradient(120deg, #1c2541, #0b132b);
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        header h1 {
-            font-size: 4rem;
-            margin: 0.5rem;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: 0 0 10px #0288d1, 0 0 20px #00bcd4;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            max-width: 700px;
-            line-height: 1.8;
-            color: #b3e5fc;
-        }
-
-        header button {
-            background-color: #0288d1;
-            color: white;
-            border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.6);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        header button:hover {
-            background-color: #00bcd4;
-            transform: scale(1.1);
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #1c2541;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        nav a {
-            color: #00bcd4;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 0 1.5rem;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0288d1;
-            border-bottom: 2px solid #0288d1;
-        }
-
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: #00bcd4;
-            text-shadow: 0 0 8px #00bcd4;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #b3e5fc;
-        }
-
-        .card {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .card-item {
-            background: #1c2541;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            max-width: 350px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5);
-        }
-
-        .card-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 4px solid #00bcd4;
-        }
-
-        .card-item h3 {
-            padding: 1rem;
-            font-size: 1.5rem;
-            color: #00bcd4;
-        }
-
-        .card-item p {
-            padding: 0 1rem 1.5rem;
-            color: #b3e5fc;
-        }
-
-        footer {
-            background-color: #1c2541;
-            color: #b3e5fc;
-            padding: 2rem 1rem;
-            text-align: center;
-            margin-top: 4rem;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        footer a {
-            color: #00bcd4;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer form {
-            margin-top: 1rem;
-        }
-
-        footer form input {
-            padding: 0.5rem;
-            border-radius: 5px;
-            border: none;
-            margin-right: 0.5rem;
-        }
-
-        footer form button {
-            background-color: #0288d1;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer form button:hover {
-            background-color: #00bcd4;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
-
-            .card-item {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to the Blue Base 🦢</h1>
@@ -218,7 +27,8 @@
     <main>
         <section>
             <h2>Why Join the Blue Base?</h2>
-            <p>Step into the world of cybersecurity with like-minded individuals. Build, defend, and conquer threats with cutting-edge resources.</p>
+            <p>Step into the world of cybersecurity with like-minded individuals. Build, defend, and conquer threats
+                with cutting-edge resources.</p>
         </section>
         <section>
             <h2>Explore Our Features</h2>
@@ -245,7 +55,8 @@
             <div class="card">
                 <div class="card-item">
                     <img src="https://source.unsplash.com/350x200/?cybersecurity" alt="Password Tester">
-                    <h3><a href="https://www.security.org/how-secure-is-my-password/" target="_blank">Password Strength Tester</a></h3>
+                    <h3><a href="https://www.security.org/how-secure-is-my-password/" target="_blank">Password Strength
+                            Tester</a></h3>
                     <p>Test the strength of your passwords and get tips on creating secure ones.</p>
                 </div>
                 <div class="card-item">
@@ -304,25 +115,31 @@
         </section>
     </main>
     <footer>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem; max-width: 1200px; margin: 0 auto;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem; max-width: 1200px; margin: 0 auto;">
             <div>
                 <p>&copy; 2024 Blue Base. All rights reserved.</p>
                 <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
             </div>
             <div>
                 <p>Follow us:</p>
-                <a href="https://twitter.com" target="_blank"><img src="/icons/twitter.svg" alt="Twitter" style="width: 24px; margin: 0 5px;"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn" style="width: 24px; margin: 0 5px;"></a>
-                <a href="https://github.com" target="_blank"><img src="/icons/github.svg" alt="GitHub" style="width: 24px; margin: 0 5px;"></a>
+                <a href="https://twitter.com" target="_blank"><img src="/icons/twitter.svg" alt="Twitter"
+                        style="width: 24px; margin: 0 5px;"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn"
+                        style="width: 24px; margin: 0 5px;"></a>
+                <a href="https://github.com" target="_blank"><img src="/icons/github.svg" alt="GitHub"
+                        style="width: 24px; margin: 0 5px;"></a>
             </div>
             <div>
                 <form action="/subscribe" method="POST">
                     <label for="email">Subscribe to our Newsletter:</label><br>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required style="margin: 10px 0; padding: 0.5rem;">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required
+                        style="margin: 10px 0; padding: 0.5rem;">
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
