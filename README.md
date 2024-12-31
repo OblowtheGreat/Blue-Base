@@ -4,6 +4,8 @@
 
 Your ultimate hub for cybersecurity resources, projects, and collaboration. Step into the world of cybersecurity with like-minded individuals. Build, defend, and conquer threats with cutting-edge resources.
 
+![Preview Image](/static/images/hero_image.jpg)
+
 ## Table of Contents
 
 - [Installation](#installation)
